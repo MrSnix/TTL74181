@@ -1,10 +1,4 @@
-#main {
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-    align-items: center;
-
+body {
     height: 100vh;
 }
 
@@ -21,22 +15,14 @@
     background: #ffffff;
 }
 
-#viewer{
-    width: 100vw;
-    height: 100%;
-    overflow: auto;
-}
-
 #viewer-container{
     width: 100%;
     height: 100%;
 
-    display: flex;
-
-    justify-content: center;
-    align-items: flex-start;
+    text-align: center;
 }
 
 #viewer-pdf {
+    display: inline-block;
     direction: ltr;
 }
