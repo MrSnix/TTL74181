@@ -18,12 +18,12 @@ import static com.ttl.alu.abc.utils.values.Bit.ZERO;
 public final class TableViewController {
 
     @SafeVarargs
-    private final List<Data<Bit>> in(Data<Bit> ...in){
+    private List<Data<Bit>> in(Data<Bit> ...in){
         return Arrays.asList(in);
     }
 
     @SafeVarargs
-    private final List<Data<String>> out(Data<String> ...out){
+    private List<Data<String>> out(Data<String> ...out){
         return Arrays.asList(out);
     }
 

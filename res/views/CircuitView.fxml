@@ -26,6 +26,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
+<?import javafx.scene.web.WebView?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ttl.alu.gui.controllers.CircuitController">
    <center>
@@ -38,7 +39,8 @@
                         <Canvas fx:id="canvas" />
                      </children>
                   </Pane>
-                  <HBox fx:id="bar_colors" alignment="CENTER" layoutY="714.0" minHeight="-Infinity" prefHeight="40.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <WebView fx:id="web_view" disable="true" layoutX="83.0" layoutY="82.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <HBox fx:id="bar_colors" alignment="CENTER" layoutY="714.0" minHeight="-Infinity" prefHeight="40.0" style="-fx-background-color: #F0F0F0; -fx-border-color: #D2D2D2 #F0F0F0 #F0F0F0 #F0F0F0;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
                         <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" spacing="5.0" HBox.hgrow="SOMETIMES">
                            <children>
@@ -88,7 +90,7 @@
                            <content>
                               <BorderPane>
                                  <center>
-                                    <TableView fx:id="table" styleClass="table-column" stylesheets="@../css/table.css" BorderPane.alignment="CENTER">
+                                    <TableView fx:id="table" style="-fx-font-size: 11px;" BorderPane.alignment="CENTER">
                                        <columnResizePolicy>
                                           <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                                        </columnResizePolicy>
@@ -292,7 +294,7 @@
             </ToolBar>
             <ToolBar layoutX="10.0" layoutY="10.0" GridPane.columnIndex="2">
                <items>
-                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#layers">
+                  <Button fx:id="btn_layers" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#layers">
                      <graphic>
                         <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>

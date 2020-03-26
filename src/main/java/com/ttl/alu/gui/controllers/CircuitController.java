@@ -9,6 +9,7 @@ import com.ttl.alu.abc.chip.utils.Pin;
 import com.ttl.alu.abc.utils.table.component.Column;
 import com.ttl.alu.abc.utils.table.component.Row;
 import com.ttl.alu.abc.utils.values.Bit;
+import com.ttl.alu.gui.utils.ApplicationState;
 import com.ttl.alu.gui.utils.Diagram;
 import com.ttl.alu.gui.validators.InputValidator;
 import com.ttl.alu.gui.validators.ex.ValidationException;
@@ -27,6 +28,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javafx.scene.web.WebView;
 import javafx.stage.FileChooser;
 
 import java.io.BufferedWriter;
@@ -40,6 +42,7 @@ import java.util.ResourceBundle;
 
 import static com.ttl.alu.abc.TTL74181.WORD_SIZE;
 import static com.ttl.alu.abc.utils.table.utils.Type.IN;
+import static com.ttl.alu.gui.utils.ApplicationState.*;
 import static javafx.scene.control.Alert.AlertType;
 
 public class CircuitController implements Initializable {
@@ -66,6 +69,7 @@ public class CircuitController implements Initializable {
     private ResourceBundle rs;
 
     private Diagram diagram;
+    private ApplicationState state;
 
     // CONTAINERS
 
@@ -83,6 +87,8 @@ public class CircuitController implements Initializable {
     private TitledPane output_view;
     @FXML
     private HBox bar_colors;
+    @FXML
+    private WebView web_view;
 
     // INPUT --- CONTROLS
 
@@ -108,6 +114,8 @@ public class CircuitController implements Initializable {
     private Spinner<Integer> input_bits;
     @FXML
     private Button exc;
+    @FXML
+    private Button btn_layers;
 
     // OUTPUT --- CONTROLS
 
@@ -133,9 +141,10 @@ public class CircuitController implements Initializable {
     public CircuitController() throws IOException {
         this.alu = new TTL74181();
         this.functions = new TableViewController();
-        // Init diagram
         this.diagram = Diagram.LOGIC;
-        this.diagram.setIMG(this.diagram);
+        this.state = ON_DIAGRAM_VIEW;
+        // Initialise diagram images
+        Diagram.Loader.init();
     }
 
     @Override
@@ -159,6 +168,7 @@ public class CircuitController implements Initializable {
         TableColumn<Row<Bit, String>, Integer> id = new TableColumn<>("#");
         id.setCellValueFactory(param -> new SimpleObjectProperty<>(param.getValue().id()));
         id.setMaxWidth(MAX_COLUMN_ID_WIDTH);
+        id.setStyle("-fx-alignment: CENTER;");
 
         TableColumn<Row<Bit, String>, Integer> op_code = new TableColumn<>("OP CODE");
         TableColumn<Row<Bit, String>, Integer> modes = new TableColumn<>("MODE");
@@ -171,6 +181,8 @@ public class CircuitController implements Initializable {
         for(Column c : functions.header()){
 
             TableColumn<Row<Bit, String>, String> column = new TableColumn<>(c.name());
+
+            column.setStyle("-fx-alignment: CENTER;");
 
             if(c.type() == IN) {
                 // Setting values
@@ -345,6 +357,47 @@ public class CircuitController implements Initializable {
         logs.setText(String.join(System.lineSeparator(), this.clogs));
     }
 
+    private void __enable_webview(){
+        // Enabling web view
+        web_view.setDisable(false);
+        // Showing web view
+        web_view.setVisible(true);
+        // Loading the pdf viewer
+        web_view.getEngine().load(getClass().getResource("/pdf/viewer/manual/index.html").toString());
+    }
+    private void __disable_webview(){
+        // Hiding web view
+        web_view.setVisible(false);
+        // Disabling web view
+        web_view.setDisable(true);
+    }
+
+    private void __enable_canvas(){
+        // Enabling canvas
+        canvas.setDisable(false);
+        // Showing canvas
+        canvas.setVisible(true);
+        // Enabling colors bar
+        bar_colors.setDisable(false);
+        // Showing colors bar
+        boolean state = diagram != Diagram.LOGIC;
+        bar_colors.setVisible(state);
+        // Enabling layer button
+        btn_layers.setDisable(false);
+    }
+    private void __disable_canvas(){
+        // Disabling layer button
+        btn_layers.setDisable(true);
+        // Disabling colors bar
+        bar_colors.setDisable(true);
+        // Hiding colors bar
+        bar_colors.setVisible(false);
+        // Hiding canvas
+        canvas.setVisible(false);
+        // Disabling canvas
+        canvas.setDisable(true);
+    }
+
     // -- BUTTONS ----------------------------
 
     public void execute(){
@@ -418,29 +471,12 @@ public class CircuitController implements Initializable {
     public void layers(){
         // Change state
        diagram = (diagram == Diagram.LOGIC) ? Diagram.LAYERS : Diagram.LOGIC;
-
-        try {
-            diagram.setIMG(diagram);
-        } catch (IOException e) {
-            // Creating error dialog
-            Alert error = new Alert(AlertType.ERROR);
-            // Some stuff
-            error.initOwner(exc.getScene().getWindow());
-            error.setTitle(rs.getString("ALERT_TITLE_TEXT"));
-            error.setHeaderText(rs.getString("ALERT_HEADER_TEXT"));
-            error.setContentText(rs.getString("ALERT_CONTENT_TEXT") + System.lineSeparator() + e);
-            // Showing
-            error.show();
-        }
-
         // Change toolbar colors state
-        boolean state = !bar_colors.isVisible();
-
+        boolean state = diagram != Diagram.LOGIC;
+        // Setting visible
         bar_colors.setVisible(state);
-
-        // Now, drawing
+        // Now, drawing to apply effect
         draw();
-
     }
     public void about(){
 
@@ -456,5 +492,19 @@ public class CircuitController implements Initializable {
     }
     public void help(){
 
+        switch (state) {
+            case ON_DIAGRAM_VIEW:
+                __disable_canvas();
+                __enable_webview();
+                state = ON_READER_VIEW;
+                break;
+            case ON_READER_VIEW:
+                __enable_canvas();
+                __disable_webview();
+                state = ON_DIAGRAM_VIEW;
+                break;
+        }
+
     }
+
 }

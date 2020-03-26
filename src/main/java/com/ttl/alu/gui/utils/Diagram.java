@@ -21,11 +21,21 @@ public enum Diagram {
         return pathname;
     }
 
-    public void setIMG(Diagram e) throws IOException {
-        this.img = new Image(getClass().getResource(e.pathname).openStream());
+    public void load() throws IOException {
+        this.img = new Image(getClass().getResource(pathname).openStream());
     }
 
     public Image getIMG() {
         return img;
     }
+
+    public static class Loader {
+
+        public static void init() throws IOException {
+            Diagram.LOGIC.load();
+            Diagram.LAYERS.load();
+        }
+
+    }
+
 }

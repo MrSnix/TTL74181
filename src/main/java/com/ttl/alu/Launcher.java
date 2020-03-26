@@ -14,8 +14,9 @@ public class Launcher extends Application {
 
     private static final int WIDTH = 1024;
     private static final int HEIGHT = 768;
+    private static final boolean MAXIMIZED = true;
 
-    private static final String WINDOW_TITLE = "Texas Instruments - 74181 (ALU) - Emulator";
+    private static final String WINDOW_TITLE = " Fairchild Semiconductor - 74181 (ALU) - Emulator";
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -27,6 +28,8 @@ public class Launcher extends Application {
         // Setting window size
         stage.setMinWidth(WIDTH);
         stage.setMinHeight(HEIGHT);
+        // Setting as maximised by default
+        stage.setMaximized(MAXIMIZED);
         // Setting icon
         stage.getIcons().add(new Image(getClass().getResource("/img/icons/32.jpg").openStream()));
         stage.getIcons().add(new Image(getClass().getResource("/img/icons/64.jpg").openStream()));

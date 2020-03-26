@@ -309,8 +309,7 @@
 	<path id="path92808-1-9-35" d="M420,329.2c0,1-0.8,1.8-1.8,1.8s-1.8-0.8-1.8-1.8s0.8-1.8,1.8-1.8C419.2,327.4,420,328.2,420,329.2z
 		"/>
 	<path id="path92808-1-9-94" d="M424.8,296.8c0,1-0.8,1.8-1.8,1.8s-1.8-0.8-1.8-1.8s0.8-1.8,1.8-1.8S424.8,295.8,424.8,296.8z"/>
-	<path id="path92808-1-9-84" d="M429.6,286c0,1-0.8,1.8-1.8,1.8S426,287,426,286s0.8-1.8,1.8-1.8C428.8,284.2,429.6,285,429.6,286z"
-		/>
+	<path id="path92808-1-9-84" d="M429.6,286c0,1-0.8,1.8-1.8,1.8S426,287,426,286s0.8-1.8,1.8-1.8S429.6,285,429.6,286z"/>
 	<path id="path92808-1-9-69" d="M434.4,264.4c0,1-0.8,1.8-1.8,1.8s-1.8-0.8-1.8-1.8s0.8-1.8,1.8-1.8S434.4,263.4,434.4,264.4z"/>
 	<path id="path92808-1-9-290" d="M445.2,253.6c0,1-0.8,1.8-1.8,1.8s-1.8-0.8-1.8-1.8s0.8-1.8,1.8-1.8
 		C444.4,251.8,445.2,252.6,445.2,253.6z"/>
@@ -635,46 +634,46 @@
 	</g>
 </g>
 <g id="layer4">
-	<text transform="matrix(1 0 0 1 0 12.5548)" class="st12 st13">C</text>
-	<text transform="matrix(1 0 0 1 10.1104 18.5548)" class="st12 st14">n</text>
-	<text transform="matrix(1 0 0 1 26.9414 12.3712)" class="st12 st13">M</text>
-	<text transform="matrix(1 0 0 1 47.1523 12.3712)" class="st12 st13">A</text>
-	<text transform="matrix(1 0 0 1 56.4902 15.1699)" class="st12 st14">0</text>
-	<text transform="matrix(1 0 0 1 168.9063 12.3712)" class="st12 st13">B</text>
-	<text transform="matrix(1 0 0 1 178.2441 15.1699)" class="st12 st14">0</text>
-	<text transform="matrix(1 0 0 1 227.2695 12.3712)" class="st12 st13">A</text>
-	<text transform="matrix(1 0 0 1 236.6074 15.1699)" class="st12 st14">1</text>
-	<text transform="matrix(1 0 0 1 356.2236 12.3712)" class="st12 st13">B</text>
-	<text transform="matrix(1 0 0 1 365.5615 15.1699)" class="st12 st14">1</text>
-	<text transform="matrix(1 0 0 1 407.3057 12.3712)" class="st12 st13">A</text>
-	<text transform="matrix(1 0 0 1 416.6436 15.1699)" class="st12 st14">2</text>
-	<text transform="matrix(1 0 0 1 536.2588 12.3712)" class="st12 st13">B</text>
-	<text transform="matrix(1 0 0 1 545.5977 15.1699)" class="st12 st14">2</text>
-	<text transform="matrix(1 0 0 1 587.2139 12.3712)" class="st12 st13">A</text>
-	<text transform="matrix(1 0 0 1 596.5518 15.1699)" class="st12 st14">3</text>
-	<text transform="matrix(1 0 0 1 716.168 12.3712)" class="st12 st13">B</text>
-	<text transform="matrix(1 0 0 1 725.5059 15.1699)" class="st12 st14">3</text>
-	<text transform="matrix(1 0 0 1 736.3076 76.211)" class="st12 st15">S</text>
-	<text transform="matrix(1 0 0 1 742.9775 78.211)" class="st12 st15">0</text>
-	<text transform="matrix(1 0 0 1 747.8867 87.0821)" class="st12 st15">S</text>
-	<text transform="matrix(1 0 0 1 754.5566 89.0821)" class="st12 st15">1</text>
-	<text transform="matrix(1 0 0 1 759.207 97.8809)" class="st12 st15">S</text>
-	<text transform="matrix(1 0 0 1 765.877 99.8809)" class="st12 st15">2</text>
-	<text transform="matrix(1 0 0 1 770.4482 108.6114)" class="st12 st15">S</text>
-	<text transform="matrix(1 0 0 1 777.1182 110.6094)" class="st12 st15">3</text>
-	<text transform="matrix(1 0 0 1 14.8721 552.1855)" class="st12 st13">F</text>
-	<text transform="matrix(1 0 0 1 23.4238 554.9864)" class="st12 st14">0</text>
-	<text transform="matrix(1 0 0 1 122.9893 552.1855)" class="st12 st13">F</text>
-	<text transform="matrix(1 0 0 1 131.541 554.9864)" class="st12 st14">1</text>
-	<text transform="matrix(1 0 0 1 183.5732 552.1855)" class="st12 st13">A=B</text>
-	<text transform="matrix(1 0 0 1 263.4248 552.1855)" class="st12 st13">F</text>
-	<text transform="matrix(1 0 0 1 271.9766 554.9864)" class="st12 st14">2</text>
-	<text transform="matrix(1 0 0 1 410.9336 552.1855)" class="st12 st13">F</text>
-	<text transform="matrix(1 0 0 1 419.4854 554.9864)" class="st12 st14">3</text>
-	<text transform="matrix(1 0 0 1 550.3154 552.1855)" class="st12 st13">P</text>
-	<text transform="matrix(1 0 0 1 590.7568 552.3712)" class="st12 st13">C</text>
-	<text transform="matrix(1 0 0 1 600.8672 555.17)" class="st12 st14">n+4</text>
-	<text transform="matrix(1 0 0 1 690.1416 552.3712)" class="st12 st13">G</text>
+	<text transform="matrix(1 0 0 1 0 12.5298)" class="st12 st13">C</text>
+	<text transform="matrix(1 0 0 1 10.1104 18.5298)" class="st12 st14">n</text>
+	<text transform="matrix(1 0 0 1 26.9414 12.3462)" class="st12 st13">M</text>
+	<text transform="matrix(1 0 0 1 47.1523 12.3462)" class="st12 st13">A</text>
+	<text transform="matrix(1 0 0 1 56.4902 15.1449)" class="st12 st14">0</text>
+	<text transform="matrix(1 0 0 1 168.9063 12.3462)" class="st12 st13">B</text>
+	<text transform="matrix(1 0 0 1 178.2441 15.1449)" class="st12 st14">0</text>
+	<text transform="matrix(1 0 0 1 227.2695 12.3462)" class="st12 st13">A</text>
+	<text transform="matrix(1 0 0 1 236.6074 15.1449)" class="st12 st14">1</text>
+	<text transform="matrix(1 0 0 1 356.2236 12.3462)" class="st12 st13">B</text>
+	<text transform="matrix(1 0 0 1 365.5615 15.1449)" class="st12 st14">1</text>
+	<text transform="matrix(1 0 0 1 407.3057 12.3462)" class="st12 st13">A</text>
+	<text transform="matrix(1 0 0 1 416.6436 15.1449)" class="st12 st14">2</text>
+	<text transform="matrix(1 0 0 1 536.2588 12.3462)" class="st12 st13">B</text>
+	<text transform="matrix(1 0 0 1 545.5977 15.1449)" class="st12 st14">2</text>
+	<text transform="matrix(1 0 0 1 587.2139 12.3462)" class="st12 st13">A</text>
+	<text transform="matrix(1 0 0 1 596.5518 15.1449)" class="st12 st14">3</text>
+	<text transform="matrix(1 0 0 1 716.168 12.3462)" class="st12 st13">B</text>
+	<text transform="matrix(1 0 0 1 725.5059 15.1449)" class="st12 st14">3</text>
+	<text transform="matrix(1 0 0 1 736.3076 76.186)" class="st12 st15">S</text>
+	<text transform="matrix(1 0 0 1 742.9775 78.186)" class="st12 st15">0</text>
+	<text transform="matrix(1 0 0 1 747.8867 87.0571)" class="st12 st15">S</text>
+	<text transform="matrix(1 0 0 1 754.5566 89.0571)" class="st12 st15">1</text>
+	<text transform="matrix(1 0 0 1 759.207 97.8559)" class="st12 st15">S</text>
+	<text transform="matrix(1 0 0 1 765.877 99.8559)" class="st12 st15">2</text>
+	<text transform="matrix(1 0 0 1 770.4482 108.5864)" class="st12 st15">S</text>
+	<text transform="matrix(1 0 0 1 777.1182 110.5844)" class="st12 st15">3</text>
+	<text transform="matrix(1 0 0 1 14.8721 552.1605)" class="st12 st13">F</text>
+	<text transform="matrix(1 0 0 1 23.4238 554.9614)" class="st12 st14">0</text>
+	<text transform="matrix(1 0 0 1 122.9893 552.1605)" class="st12 st13">F</text>
+	<text transform="matrix(1 0 0 1 131.541 554.9614)" class="st12 st14">1</text>
+	<text transform="matrix(1 0 0 1 183.5732 552.1605)" class="st12 st13">A=B</text>
+	<text transform="matrix(1 0 0 1 263.4248 552.1605)" class="st12 st13">F</text>
+	<text transform="matrix(1 0 0 1 271.9766 554.9614)" class="st12 st14">2</text>
+	<text transform="matrix(1 0 0 1 410.9336 552.1605)" class="st12 st13">F</text>
+	<text transform="matrix(1 0 0 1 419.4854 554.9614)" class="st12 st14">3</text>
+	<text transform="matrix(1 0 0 1 550.3154 552.1605)" class="st12 st13">P</text>
+	<text transform="matrix(1 0 0 1 590.7568 552.3462)" class="st12 st13">C</text>
+	<text transform="matrix(1 0 0 1 600.8672 555.145)" class="st12 st14">n+4</text>
+	<text transform="matrix(1 0 0 1 690.1416 552.3462)" class="st12 st13">G</text>
 	<path id="path96778" class="st3" d="M690.7,540.2h9.2"/>
 	<path id="path96778-3" class="st3" d="M550.1,540.2h9.2"/>
 	<path id="path96778-36" class="st3" d="M410.7,540.2h9.2"/>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>PDF Viewer - Manual</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Loading css framework -->
+    <link rel="stylesheet" href="../uikit/css/uikit.min.css"/>
+    <script src="../uikit/js/uikit.min.js"></script>
+    <script src="../uikit/js/uikit-icons.min.js"></script>
+
+    <!-- Loading pdf.js library -->
+    <script src="../js/pdf.js"></script>
+    <!-- Loading base64 pdf data -->
+    <script src="data/data.js"></script>
+    <!-- Loading initialisation script on the controls (defer) -->
+    <script src="../js/controls.js" defer></script>
+
+</head>
+
+<body>
+
+<div id="main">
+
+    <div id="controls" class="uk-button-group uk-width">
+
+        <button id="zoom-out" class="uk-button uk-width-1-6 uk-button-default"><span class="uk-icon-link" uk-icon="minus"></span></button>
+        <button id="zoom-in" class="uk-button uk-width-1-6 uk-button-default"><span class="uk-icon-link" uk-icon="plus"></span></button>
+
+        <button class="uk-button uk-width-1-4 uk-button-default" style="cursor: default"><span id="page_num"></span> / <span id="page_count"></span></button>
+
+        <button id="prev" class="uk-button uk-width-1-6 uk-button-default"><span class="uk-icon-link" uk-icon="arrow-left"></span></button>
+        <button id="next" class="uk-button uk-width-1-6 uk-button-default"><span class="uk-icon-link" uk-icon="arrow-right"></span></button>
+    </div>
+
+    <div id="viewer">
+        <div id="viewer-container">
+            <canvas id="viewer-pdf"></canvas>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
