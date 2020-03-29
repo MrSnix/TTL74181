@@ -1,7 +1,3 @@
-body {
-    height: 100vh;
-}
-
 #controls {
     display: flex;
     padding: 1em;
