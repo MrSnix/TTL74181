@@ -46,7 +46,7 @@ The following software includes:
 In this example, the ALU is doing a **simple sum** (A + B = F) where A = 9 and B = 17  
 
 <p align="center">
-  <img width="915" height="549" src="pictures/sum.jpg" alt="Command prompt with logs">
+  <img width="915" height="549" src="pictures/cmd-logs.jpg" alt="Command prompt with logs">
 </p>
 
 ### Multi-layer mode
@@ -58,7 +58,7 @@ In this example, the ALU is doing a **simple sum** (A + B = F) where A = 9 and B
 ### Documentation view
 
 <p align="center">
-  <img width="955" height="512" src="pictures/doc-view.jpg" alt="The documentation view">
+  <img width="955" height="512" src="pictures/docview.jpg" alt="The documentation view">
 </p>
 
 ## Build, download & changelog
