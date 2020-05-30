@@ -1,28 +1,69 @@
 ## Table of Contents
 - [Introduction](#introduction)
 - [Features](#features)
-- [Quickstart](#quick-start)
+- [Screen-shots](#screen-shots)
 - [Build, download & changelog](#build-download--changelog)
 - [Feedback](#feedback)
 - [License](#license)
 
 ## Introduction
-WIP
+
+This software has been mainly developed while I was studying   
+"Computer Architecture and Operating Systems" at the university.
+
+The alu is a component I find fascinating.  
+Its design is ingenious, and the way it has changed computers is incredible.  
+
+I found on YouTube a video made by "CrashCourse - The Mechanics of How Computers Work",  
+which introduced the chip TTL74181 as the first ALU implemented as an integrated circuit.  
+
+From here, I started looking for datasheets on the TTL74181 and looking for manuals.   
+This software is an emulator and the result of the study that I conducted  
+for pure fun on this component so interesting.  
 
 ## Features
 
-WIP
+The following software includes:
+- **Arithmetic and logic mode** emulation
+- **Multi-ALU support** (x2, x4, x8)
+- **Function table** with all opcodes and their description
+- **Command prompt** to execute manually each operation
+- **Output window** with many details
+- **Multi-layer mode** which highlights the most important logic gates
+- **Documentation view** inside the software (yep, it's true)
+- **Log window** (So you can export the calculation eventually...)
 
-## Quick-start
+## Screen-shots
 
-### The basics
+### Window
 
-WIP
+<p align="center">
+  <img width="960" height="520" src="pictures/window.jpg" alt="The main window">
+</p>
+
+### Commands & logs
+
+In this example, the ALU is doing a **simple sum** (A + B = F) where A = 9 and B = 17
+<p align="center">
+  <img width="915" height="549" src="pictures/sum.jpg" alt="The main window">
+</p>
+
+### Multi-layer mode
+
+<p align="center">
+  <img width="960" height="511" src="pictures/multi-layer.jpg" alt="The multi-layer window">
+</p>
+
+### Documentation view
+
+<p align="center">
+  <img width="955" height="512" src="pictures/doc-view.jpg" alt="The documentation view">
+</p>
 
 ## Build, download & changelog
 
 #### Building the library
-TTL74181 requires Maven 3 and JDK 11.<br>
+TTL74181 requires Maven 3, JDK 11 and JavaFX 11.<br>
 The generated JARs is compatible only with Java 11 and higher.
 
 Build command:
@@ -31,8 +72,7 @@ Build command:
 mvn clean package
 ````
 
-The " ***target*** " directory with javadoc documentation 
-and all JARs will be available at the root directory.
+The " ***target*** " directory with the JAR will be available at the root directory.
 
 #### Download
 
