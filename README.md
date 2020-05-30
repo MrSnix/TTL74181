@@ -1,3 +1,5 @@
+# TTL74181 Emulator
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [Features](#features)
@@ -8,18 +10,17 @@
 
 ## Introduction
 
-This software has been mainly developed while I was studying   
+This software has been mainly developed while I was studying
 "Computer Architecture and Operating Systems" at the university.
 
-The alu is a component I find fascinating.  
+The alu is a component I find fascinating.
 Its design is ingenious, and the way it has changed computers is incredible.  
 
 I found on YouTube a video made by "CrashCourse - The Mechanics of How Computers Work",  
 which introduced the chip TTL74181 as the first ALU implemented as an integrated circuit.  
 
 From here, I started looking for datasheets on the TTL74181 and looking for manuals.   
-This software is an emulator and the result of the study that I conducted  
-for pure fun on this component so interesting.  
+This software is an emulator and the result of the study that I conducted for pure fun on this component so interesting.  
 
 ## Features
 
