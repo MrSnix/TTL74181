@@ -64,9 +64,19 @@ In this example, the ALU is doing a **simple sum** (A + B = F) where A = 9 and B
 
 ## Build, download & changelog
 
-#### Building the library
+#### Building the jar
+
 TTL74181 requires Maven 3, JDK 11 and JavaFX 11.<br>
 The generated JARs is compatible only with Java 11 and higher.
+
+Each platform requires different dependencies, so by default,  
+**only the profile for your current OS platform is active**.
+
+**In order to build a jar for a different platform**  
+you have to switch from one of those profiles using Maven:
+- _win_
+- _mac_
+- _linux_
 
 Build command:
 
@@ -75,12 +85,18 @@ mvn clean package
 ````
 
 The " ***target*** " directory with the JAR will be available at the root directory.
+If you have chosen the correct profile you will find inside the target
+directory **two files**:
+- TTL74181.jar (**no dependencies** included)
+- TTL74181 - (platform_name).jar (**with dependencies** included)
 
 #### Download
 
-You can get the latest precompiled .jar files 
+You can get the latest precompiled .jar files (Win, Mac & Linux)
 from [this page](https://github.com/MrSnix/TTL74181/releases).
 
+To run, simply execute:
+`java -jar <filename>`
 
 #### Tracking changes
 
