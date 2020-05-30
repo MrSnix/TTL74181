@@ -43,9 +43,10 @@ The following software includes:
 
 ### Commands & logs
 
-In this example, the ALU is doing a **simple sum** (A + B = F) where A = 9 and B = 17
+In this example, the ALU is doing a **simple sum** (A + B = F) where A = 9 and B = 17  
+
 <p align="center">
-  <img width="915" height="549" src="pictures/sum.jpg" alt="The main window">
+  <img width="915" height="549" src="pictures/sum.jpg" alt="Command prompt with logs">
 </p>
 
 ### Multi-layer mode
