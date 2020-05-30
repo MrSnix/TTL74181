@@ -45,6 +45,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import static com.ttl.alu.Launcher.ICONS;
 import static com.ttl.alu.abc.TTL74181.WORD_SIZE;
 import static com.ttl.alu.abc.utils.table.utils.Type.IN;
 import static com.ttl.alu.gui.utils.ApplicationState.*;
@@ -486,18 +487,20 @@ public class CircuitController implements Initializable {
     }
     public void about(){
         try {
+            // Opening new stage
             Stage stage = new Stage();
+            // Importing view content
             stage.setScene(new Scene(load(getClass().getResource("/views/AboutView.fxml"))));
+            // Disable resizable status
             stage.setResizable(false);
+            // Setting title
             stage.setTitle(rs.getString("ABOUT_TITLE_TEXT"));
-            stage.getIcons().add(new Image(getClass().getResource("/img/icons/32.png").openStream()));
-            stage.getIcons().add(new Image(getClass().getResource("/img/icons/64.png").openStream()));
-            stage.getIcons().add(new Image(getClass().getResource("/img/icons/128.png").openStream()));
-            stage.getIcons().add(new Image(getClass().getResource("/img/icons/256.png").openStream()));
-            stage.getIcons().add(new Image(getClass().getResource("/img/icons/512.png").openStream()));
+            // Setting icon
+            stage.getIcons().addAll(ICONS);
+            // Show
             stage.show();
         } catch(Exception e) {
-            // Just leave it like that
+            e.printStackTrace();
         }
     }
     public void help(){

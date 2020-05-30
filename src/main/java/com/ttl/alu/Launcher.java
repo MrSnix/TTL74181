@@ -6,6 +6,8 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import static javafx.fxml.FXMLLoader.load;
@@ -15,6 +17,19 @@ public class Launcher extends Application {
     private static final int WIDTH = 1024;
     private static final int HEIGHT = 768;
     private static final boolean MAXIMIZED = false;
+    public static final List<Image> ICONS = new ArrayList<>();
+
+    static {
+        try {
+            ICONS.add(new Image(Launcher.class.getResource("/img/icons/32.png").openStream()));
+            ICONS.add(new Image(Launcher.class.getResource("/img/icons/64.png").openStream()));
+            ICONS.add(new Image(Launcher.class.getResource("/img/icons/128.png").openStream()));
+            ICONS.add(new Image(Launcher.class.getResource("/img/icons/256.png").openStream()));
+            ICONS.add(new Image(Launcher.class.getResource("/img/icons/512.png").openStream()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     private static final String WINDOW_TITLE = "Fairchild Semiconductor - 74181 (ALU) - Emulator";
 
@@ -31,11 +46,7 @@ public class Launcher extends Application {
         // Setting as maximised by default
         stage.setMaximized(MAXIMIZED);
         // Setting icon
-        stage.getIcons().add(new Image(getClass().getResource("/img/icons/32.png").openStream()));
-        stage.getIcons().add(new Image(getClass().getResource("/img/icons/64.png").openStream()));
-        stage.getIcons().add(new Image(getClass().getResource("/img/icons/128.png").openStream()));
-        stage.getIcons().add(new Image(getClass().getResource("/img/icons/256.png").openStream()));
-        stage.getIcons().add(new Image(getClass().getResource("/img/icons/512.png").openStream()));
+        stage.getIcons().addAll(ICONS);
         // Enabling
         stage.show();
     }
