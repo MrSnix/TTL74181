@@ -18,11 +18,15 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.*;
 import javafx.scene.control.SpinnerValueFactory.ListSpinnerValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
@@ -30,6 +34,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.web.WebView;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -43,6 +48,7 @@ import java.util.ResourceBundle;
 import static com.ttl.alu.abc.TTL74181.WORD_SIZE;
 import static com.ttl.alu.abc.utils.table.utils.Type.IN;
 import static com.ttl.alu.gui.utils.ApplicationState.*;
+import static javafx.fxml.FXMLLoader.load;
 import static javafx.scene.control.Alert.AlertType;
 
 public class CircuitController implements Initializable {
@@ -479,16 +485,20 @@ public class CircuitController implements Initializable {
         draw();
     }
     public void about(){
-
-        Alert about = new Alert(AlertType.INFORMATION);
-
-        about.initOwner(exc.getScene().getWindow());
-
-        about.setTitle(rs.getString("ABOUT_TITLE_TEXT"));
-        about.setHeaderText(rs.getString("ABOUT_HEADER_TEXT"));
-        about.setContentText(rs.getString("ABOUT_CONTENT_TEXT"));
-
-        about.show();
+        try {
+            Stage stage = new Stage();
+            stage.setScene(new Scene(load(getClass().getResource("/views/AboutView.fxml"))));
+            stage.setResizable(false);
+            stage.setTitle(rs.getString("ABOUT_TITLE_TEXT"));
+            stage.getIcons().add(new Image(getClass().getResource("/img/icons/32.png").openStream()));
+            stage.getIcons().add(new Image(getClass().getResource("/img/icons/64.png").openStream()));
+            stage.getIcons().add(new Image(getClass().getResource("/img/icons/128.png").openStream()));
+            stage.getIcons().add(new Image(getClass().getResource("/img/icons/256.png").openStream()));
+            stage.getIcons().add(new Image(getClass().getResource("/img/icons/512.png").openStream()));
+            stage.show();
+        } catch(Exception e) {
+            // Just leave it like that
+        }
     }
     public void help(){
 
