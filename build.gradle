@@ -5,7 +5,7 @@ plugins {
 
 group = 'com.ttl.alu'
 version = '1.0'
-description = 'TTL74181'
+description = 'TTL74181 is a 4-bit ALU emulator based on the original architecture design made by Fairchild Semiconductor'
 
 // The allowed values are: [ "win", "mac", "linux" ]
 def targetPlatform = "win"
