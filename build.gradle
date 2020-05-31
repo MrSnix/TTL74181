@@ -1,0 +1,47 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+}
+
+group = 'com.ttl.alu'
+version = '1.0'
+description = 'TTL74181'
+
+// The allowed values are: [ "win", "mac", "linux" ]
+def targetPlatform = "win"
+
+archivesBaseName = "TTL74181-$targetPlatform"
+mainClassName = 'com.ttl.alu.Main'
+sourceCompatibility = '11'
+targetCompatibility = '11'
+
+javafx {
+    version = '11'
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.web' ]
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    runtimeOnly "org.openjfx:javafx-controls:$javafx.version:$targetPlatform"
+    runtimeOnly "org.openjfx:javafx-fxml:$javafx.version:$targetPlatform"
+    runtimeOnly "org.openjfx:javafx-web:$javafx.version:$targetPlatform"
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': mainClassName,
+                'Created-By': 'Giuseppe Baittiner'
+        )
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}

@@ -42,6 +42,12 @@ The following software includes:
   <img width="960" height="520" src="pictures/window.jpg" alt="The main window">
 </p>
 
+### Function table
+
+<p align="center">
+  <img width="452" height="548" src="pictures/function-table.jpg" alt="The function table">
+</p>
+
 ### Commands & logs
 
 In this example, the ALU is doing a **simple sum** (A + B = F) where A = 9 and B = 17  
@@ -66,14 +72,14 @@ In this example, the ALU is doing a **simple sum** (A + B = F) where A = 9 and B
 
 #### Building the jar
 
-TTL74181 requires Maven 3, JDK 11 and JavaFX 11.<br>
+TTL74181 requires Gradle 6.4.1, JDK 11 and JavaFX 11.<br>
 The generated JARs is compatible only with Java 11 and higher.
 
 Each platform requires different dependencies, so by default,  
-**only the profile for your current OS platform is active**.
+**the target platform is Windows**.
 
-**In order to build a jar for a different platform**  
-you have to switch from one of those profiles using Maven:
+**In order to build a jar for a different platform**,  
+you have to rename the variable 'targetPlatform' inside build.gradle to one of the following values:
 - _win_
 - _mac_
 - _linux_
@@ -81,13 +87,12 @@ you have to switch from one of those profiles using Maven:
 Build command:
 
 ````
-mvn clean package
+gradle clean jar
 ````
 
-The " ***target*** " directory with the JAR will be available at the root directory.
+The ***build / libs***  directory with the JAR will be available at the root directory.  
 If you have chosen the correct profile you will find inside the target
-directory **two files**:
-- TTL74181.jar (**no dependencies** included)
+directory **one fat jar**:
 - TTL74181 - (platform_name).jar (**with dependencies** included)
 
 #### Download
