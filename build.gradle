@@ -8,7 +8,7 @@ version = '1.0'
 description = 'TTL74181 is a 4-bit ALU emulator based on the original architecture design made by Fairchild Semiconductor'
 
 // The allowed values are: [ "win", "mac", "linux" ]
-def targetPlatform = "win"
+def targetPlatform = "linux"
 
 archivesBaseName = "TTL74181-$targetPlatform"
 mainClassName = 'com.ttl.alu.Main'
@@ -17,7 +17,6 @@ targetCompatibility = '11'
 
 javafx {
     version = '11'
-    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.web' ]
 }
 
 repositories {
@@ -25,9 +24,18 @@ repositories {
 }
 
 dependencies {
+
+    implementation "org.openjfx:javafx-base:$javafx.version:$targetPlatform"
+    implementation "org.openjfx:javafx-graphics:$javafx.version:$targetPlatform"
+    implementation "org.openjfx:javafx-controls:$javafx.version:$targetPlatform"
+    implementation "org.openjfx:javafx-fxml:$javafx.version:$targetPlatform"
+    implementation "org.openjfx:javafx-web:$javafx.version:$targetPlatform"
+
     runtimeOnly "org.openjfx:javafx-controls:$javafx.version:$targetPlatform"
     runtimeOnly "org.openjfx:javafx-fxml:$javafx.version:$targetPlatform"
     runtimeOnly "org.openjfx:javafx-web:$javafx.version:$targetPlatform"
+    runtimeOnly "org.openjfx:javafx-media:$javafx.version:$targetPlatform"
+
 }
 
 jar {
