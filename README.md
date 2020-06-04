@@ -90,15 +90,17 @@ Build command:
 gradle clean jar
 ````
 
-The ***build / libs***  directory with the JAR will be available at the root directory.  
+The ***build / libs***  directory with the JAR will be available at the root directory.
 If you have chosen the correct profile you will find inside the target
-directory **one fat jar**:
+directory **one fat jar** with JavaFX dependencies included:
 - TTL74181 - (platform_name).jar (**with dependencies** included)
 
 #### Download
 
 You can get the latest precompiled .jar files (Win, Mac & Linux)
 from [this page](https://github.com/MrSnix/TTL74181/releases).
+The JavaFX dependencies are included inside the .jar file,  
+you only need the JRE.
 
 To run, simply execute:
 `java -jar <filename>`
