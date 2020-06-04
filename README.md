@@ -99,7 +99,7 @@ directory **one fat jar** with JavaFX dependencies included:
 
 You can get the latest precompiled .jar files (Win, Mac & Linux)
 from [this page](https://github.com/MrSnix/TTL74181/releases).
-The JavaFX dependencies are included inside the .jar file,  
+The JavaFX dependencies are included inside the .jar file,
 you only need the JRE.
 
 To run, simply execute:
